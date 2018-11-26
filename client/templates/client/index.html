@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for obj in clients %}
+{{ obj.first_name }} {{ obj.last_name | first }}.<br>
+{% endfor %}
+</body>
+</html>
