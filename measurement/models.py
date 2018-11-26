@@ -13,6 +13,7 @@ class Measurement(models.Model):
     body_fat = models.FloatField()
     plank = models.CharField(max_length=120)
     date = models.DateField(auto_now_add=True)
+    goal_date = models.DateField()
 
     def __str__(self):
         return str(self.profile) + "'s measurements"

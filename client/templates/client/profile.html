@@ -7,21 +7,28 @@
 </head>
 <body>
 <div class="container">
-<div class="card">
+<div class="card mt-5">
   <div class="card-header">
-    <h1>{{ object.profile }}</h1>
+    <span class="text-center">
+  <img src="..." class="rounded" alt="..."></span><h1>{{ object.profile }}</h1>
   </div>
   <div class="card-body">
-    <strong>Last Weigh In: {{ object.date | timesince}} ago</strong><br>
-    Current Weight: {{ object.current_weight }}<br>
+    <span class="badge badge-pill badge-primary">Current Weight: {{ object.current_weight }}</span>
+      <strong> Last Weigh In: </strong>{{ object.date | timesince}} ago<br>
+    <br>
    <div class="progress" style="width: 70%;">
-  <div class="progress-bar bg-danger" role="progressbar" style="width:{{ object.current_weight }}" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-success" role="progressbar" style="width:{{ object.goal_weight }}%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width:{{ object.current_weight }}"
+       aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width:{{ object.goal_weight }}%"
+       aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-Goal Weight: {{ object.goal_weight }}<br>
+      <div class="badge badge-pill badge-success mt-3">Goal Weight: {{ object.goal_weight }}</div>
+      <span><strong>Goal Date:</strong> {{ object.goal_date }}<br/> <strong>Countdown: </strong>{{ object.goal_date | timeuntil }}</span><br/>
+
      Body Fat %:
-<div class="progress" style="width: 70%;">
-  <div class="progress-bar" role="progressbar" style="width: {{ object.body_fat }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ object.body_fat }}%</div>
+<div class="progress" style="width: 40%;">
+  <div class="progress-bar" role="progressbar" style="width: {{ object.body_fat }}%;"
+       aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ object.body_fat }}%</div>
 </div>
   </div>
 </div>
