@@ -7,7 +7,7 @@ from measurement.models import Measurement
 
 def client_list_view(request):
     clients = Client.objects.all()
-    return render(request, 'client/index.html', {'clients': clients})
+    return render(request, 'client/home.html', {'clients': clients})
 
 
 class ClientProfileView(DetailView):

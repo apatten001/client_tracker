@@ -5,7 +5,8 @@ trainers clients contact information, as well as
 goals and measurements. It has a simple *dashboard* that displays
 a clients info for easy recall access.
 
-##A list of things tracked
+
+## A list of things tracked
 - Clients Name
 - Current Weight
 - Goal Weight
@@ -14,3 +15,4 @@ a clients info for easy recall access.
 - Phone number
 
 
+    
