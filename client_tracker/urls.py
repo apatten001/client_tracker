@@ -20,5 +20,6 @@ from client.views import HomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', HomeView.as_view(), name='home'),
-    path('client/', include('client.urls'))
+    path('client/', include('client.urls')),
+    path('api-auth/', include('rest_framework.urls'))
 ]
