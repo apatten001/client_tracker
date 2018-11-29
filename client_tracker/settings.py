@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # project_apps
     'client',
     'measurement',
+    # installed apps
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
